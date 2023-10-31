@@ -3,7 +3,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="1200" Height="700" CanResize="False"
         x:Class="HanoiTowers.MainWindow"
         Title="HanoiTowers">
-    Welcome to Avalonia!
+    <Grid RowDefinitions="160, 450, *" ColumnDefinitions="*">
+        <Grid Grid.Row="0" Classes="Header">
+            <TextBlock Text="{Binding #RingsCount.Value}" />
+            <Slider x:Name="RingsCount" TickFrequency="1" IsSnapToTickEnabled="True" Minimum="2" Maximum="10"></Slider>
+        </Grid>
+        <Grid Grid.Row="1" Classes="Main">
+            <Button Content="Start Game"/>
+            <Rectangle Fill="Indigo" Opacity="80" ZIndex="2"></Rectangle>
+            <Canvas Background="Yellow">
+            </Canvas>
+        </Grid>
+        <Grid Grid.Row="2" Classes="Footer"><TextBlock>Footer </TextBlock></Grid>
+    </Grid>
 </Window>
