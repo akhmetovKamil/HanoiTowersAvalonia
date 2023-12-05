@@ -3,4 +3,5 @@
     <SolidColorBrush x:Key="MainColor" Color="#024A68"></SolidColorBrush>
     <SolidColorBrush x:Key="MainBackground" Color="#63AFD0"></SolidColorBrush>
     <SolidColorBrush x:Key="Disabled" Color="#9F9F9F"></SolidColorBrush>
+    
 </ResourceDictionary>

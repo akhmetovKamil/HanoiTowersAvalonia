@@ -6,17 +6,36 @@
         Width="1200" Height="700" CanResize="False"
         x:Class="HanoiTowers.MainWindow"
         Title="HanoiTowers">
-    <Grid RowDefinitions="160, 450, *" ColumnDefinitions="*">
-        <Grid Grid.Row="0" Classes="Header">
-            <TextBlock Text="{Binding #RingsCount.Value}" />
-            <Slider x:Name="RingsCount" TickFrequency="1" IsSnapToTickEnabled="True" Minimum="2" Maximum="10"></Slider>
+    <Grid RowDefinitions="160, 450, *" ColumnDefinitions="*" Classes="Window">
+        <Grid Grid.Row="0" Classes="Header" ColumnDefinitions="490, *, 490">
+            <StackPanel Grid.Column="0" HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Rings Count: " />
+                    <TextBlock Text="{Binding #RingsCount.Value}" />
+                </StackPanel>
+                <Slider x:Name="RingsCount" TickFrequency="1" IsSnapToTickEnabled="True" Minimum="2" Maximum="10"></Slider>
+            </StackPanel>
+            <StackPanel Grid.Column="1"  HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Steps"></TextBlock>
+                <TextBlock Text="0"></TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Column="2" HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock   Text="Game Mode"></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton>Manual</RadioButton>
+                    <RadioButton>Auto</RadioButton>
+                </StackPanel>
+            </StackPanel>
         </Grid>
-        <Grid Grid.Row="1" Classes="Main">
-            <Button Content="Start Game"/>
-            <Rectangle Fill="Indigo" Opacity="80" ZIndex="2"></Rectangle>
-            <Canvas Background="Yellow">
-            </Canvas>
+        <Grid Grid.Row="1" Classes="Main" x:Name="Main">
+            <Button Content="Start Game" />
+            <!-- <Rectangle></Rectangle> -->
         </Grid>
-        <Grid Grid.Row="2" Classes="Footer"><TextBlock>Footer </TextBlock></Grid>
+        <Grid Grid.Row="2" Classes="Footer">
+            <TextBlock>Footer</TextBlock>
+        </Grid>
     </Grid>
 </Window>

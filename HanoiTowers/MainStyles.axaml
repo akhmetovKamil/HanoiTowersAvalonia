@@ -1,13 +1,37 @@
 <Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style Selector="Grid.Window">
+        <Setter Property="Background" Value="{DynamicResource MainBackground}"></Setter>
+    </Style>
+    <Style Selector="TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource MainColor}"></Setter>
+    </Style>
     
     <Style Selector="Grid.Header">
-        <Setter Property="Background" Value="Bisque"></Setter>
+        <!-- <Setter Property="Background" Value="Bisque"></Setter> -->
     </Style>
+
+
     <Style Selector="Grid.Main">
-        <Setter Property="Background" Value="Chocolate"></Setter>
+        <Setter Property="Width" Value="1030"></Setter>
+
+        <Style Selector="^ Button">
+            <Setter Property="ZIndex" Value="3"></Setter>
+        </Style>
+        <Style Selector="^ Rectangle">
+            <Setter Property="Fill" Value="red"></Setter>
+            <Setter Property="Opacity" Value="0.7"></Setter>
+            <Setter Property="ZIndex" Value="2"></Setter>
+        </Style>
+        <Style Selector="^ Canvas">
+            <Setter Property="Background" Value="{DynamicResource BackgroundImage}"></Setter>
+        </Style>
+        
     </Style>
+
+
     <Style Selector="Grid.Footer">
-        <Setter Property="Background" Value="Cyan"></Setter>
+        <!-- <Setter Property="Background" Value="Cyan"></Setter> -->
     </Style>
 </Styles>

@@ -4,3 +4,6 @@ HanoiTowers/obj/
 riderModule.iml
 /_ReSharper.Caches/
 .idea
+.DS_Store
+HanoiTowers/.DS_Store
+HanoiTowers/assets/.DS_Store
